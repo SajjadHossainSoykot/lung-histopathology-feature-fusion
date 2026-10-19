@@ -1,0 +1,12 @@
+# Versions observed in the H1 training environment (Python 3.13.15, Colab T4).
+# TensorFlow and Keras versions were also observed in H4.
+# OpenCV is required for H4; no exact distribution/version was recorded here.
+tensorflow==2.21.0
+keras==3.13.2
+numpy==2.1.3
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.10.0
+Pillow==11.3.0
+tqdm==4.67.3
+opencv-python-headless

@@ -1,0 +1,40 @@
+# Datasets and raw medical images
+data/
+datasets/
+archives/
+raw/
+images/
+*.zip
+*.7z
+*.tar.gz
+*.dcm
+
+# Model checkpoints and large feature files
+checkpoints/
+feature_cache/
+*.keras
+*.h5
+*.hdf5
+*.ckpt
+*.npy
+*.npz
+*.pkl
+
+# Credentials and local secrets
+.env
+.env.*
+!.env.example
+credentials.json
+service_account.json
+*.pem
+*.key
+
+# Python and Jupyter temporary files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# Operating system files
+.DS_Store
+Thumbs.db
