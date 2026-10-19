@@ -1,0 +1,10 @@
+model,validation_condition,n_images,correct,accuracy,macro_f1,log_loss
+H3_original,clean,2273,2228,0.9802,0.980139,0.04874
+H3_original,h_up_e_down,2273,2219,0.97624,0.976148,0.05681
+H3_original,h_down_e_up,2273,2208,0.9714,0.971283,0.06617
+H4_N_reinhard,clean,2273,2211,0.97272,0.972577,0.07511
+H4_N_reinhard,h_up_e_down,2273,2205,0.97008,0.969955,0.07372
+H4_N_reinhard,h_down_e_up,2273,2201,0.96832,0.968144,0.08975
+H4_NA_reinhard_he_aug,clean,2273,2208,0.9714,0.971261,0.0721
+H4_NA_reinhard_he_aug,h_up_e_down,2273,2206,0.97052,0.970407,0.07273
+H4_NA_reinhard_he_aug,h_down_e_up,2273,2205,0.97008,0.969954,0.08436

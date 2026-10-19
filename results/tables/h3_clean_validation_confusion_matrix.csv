@@ -1,0 +1,4 @@
+true_class,pred_lung_aca,pred_lung_n,pred_lung_scc
+lung_aca,739,6,13
+lung_n,2,762,0
+lung_scc,24,0,727

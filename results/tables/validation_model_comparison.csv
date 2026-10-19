@@ -1,0 +1,6 @@
+experiment,condition,partition,n_images,accuracy,macro_f1,best_epoch_by_val_loss
+H1,frozen MobileNetV2,validation,2273,0.970963,0.970826,3
+H2,frozen EfficientNetB0,validation,2273,0.972283,0.972158,6
+H3,frozen pooled-feature fusion,validation,2273,0.980202,0.980139,5
+H4-N,"Reinhard normalization, new fusion head",validation,2273,0.972723,0.972577,6
+H4-NA,"Reinhard + H&E training augmentation, new head",validation,2273,0.971403,0.971261,6

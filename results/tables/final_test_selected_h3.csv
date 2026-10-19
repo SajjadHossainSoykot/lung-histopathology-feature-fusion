@@ -1,0 +1,2 @@
+selected_model,partition,n_images,accuracy,macro_f1,macro_precision,macro_recall
+H3 pooled-feature fusion,held_out_test,2333,0.96228,0.961961,0.962412,0.961992
