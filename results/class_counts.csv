@@ -1,0 +1,4 @@
+class_name,train,validation,test
+lung_aca,3474,758,768
+lung_n,3448,764,788
+lung_scc,3472,751,777
