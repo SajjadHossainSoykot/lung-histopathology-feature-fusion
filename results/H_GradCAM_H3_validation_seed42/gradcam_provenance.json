@@ -1,0 +1,70 @@
+{
+  "experiment": "H_GradCAM_H3_validation_seed42",
+  "project": "Stain-Robust Explainable Deep Feature Fusion for Lung Histopathology",
+  "created_at_utc": "2026-10-18T23:48:29.364297+00:00",
+  "partition": "validation",
+  "held_out_test_images_read": false,
+  "model_training_performed": false,
+  "model_selection_changed": false,
+  "selected_experiment": "H3_MobileNetV2_EfficientNetB0_fusion_seed42",
+  "selected_full_model_sha256": "9e1a5bbf49da7e88a529f5ac08303c65e138d7c9f818959aaddd46f609890c95",
+  "selected_head_sha256": "77deea98faef81db0fd8e6574598f677a18f9368fde3edccc67c3549b5098b75",
+  "h1_checkpoint_sha256": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+  "h2_checkpoint_sha256": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6",
+  "manifest_sha256": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+  "mapping_sha256": "4d14782118e3a438c13b209d7a594f2f9676d09cec25125b599d8c6d6c26a6a8",
+  "selection_freeze_file": "lung/selection/H3_model_selection_freeze_2026-10-19.json",
+  "selection_freeze_sha256": "7325e97d9aff55e6323dd6932d4456e95ec70632a12284a07aa0f7407c16cf9a",
+  "split_unit": "reconstructed source-image group (NOT patient/slide/hospital)",
+  "selection_rule": "2 per class, SHA-256 ranking of fixed seed|source_path; six distinct source-image groups",
+  "selection_seed": "H3_gradcam_validation_seed42_v1",
+  "examples_selected_before_predictions": true,
+  "selected_examples": [
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_aca/lungaca2998.jpeg",
+      "class_id": 0,
+      "selection_hash": "00091296daa48de8efa37b94c427847a9a15d3d4c800e3ce867709bec556e8df"
+    },
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_aca/lungaca1813.jpeg",
+      "class_id": 0,
+      "selection_hash": "02331a1043c21adbcde8ed102715cd2eef0b0870d3c78bc6aaabba47560fe6fe"
+    },
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_n/lungn89.jpeg",
+      "class_id": 1,
+      "selection_hash": "0031a9f6fc4a16ff9044cd94ea524944ad946bd4460c72de24615fc0d74560a7"
+    },
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_n/lungn3590.jpeg",
+      "class_id": 1,
+      "selection_hash": "005e888dfd25bc95782262629c551d1b10ad8a4e8d42484aa1853866b721e72b"
+    },
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_scc/lungscc3341.jpeg",
+      "class_id": 2,
+      "selection_hash": "00023c1e5c9ca122c2c637531af88d548449ad3cd11613dd46073b7301d20244"
+    },
+    {
+      "source_path": "lung_colon_image_set/lung_image_sets/lung_scc/lungscc4617.jpeg",
+      "class_id": 2,
+      "selection_hash": "00cdc101b01dbe3d78a4c1c72808ce50212268bae3b71bee4d09e959b4245462"
+    }
+  ],
+  "resize": "tf.image.resize_with_pad, RGB float32 224x224, bilinear antialias=True",
+  "mobilenet_preprocessing": "H1 saved Rescaling inside feature extractor",
+  "efficientnet_preprocessing": "H2 native EfficientNetB0 preprocessing inside backbone",
+  "stain_normalization_applied": false,
+  "branch_layers": {
+    "mobilenetv2": "out_relu",
+    "efficientnetb0": "top_activation"
+  },
+  "attribution_target": "same predicted-class PRE-SOFTMAX H3 fused-head logit for both branches",
+  "cam_method": "spatial-average gradient weights; channel-weighted sum; ReLU; independent normalization and resize",
+  "normalization_caveat": "Branch heatmap colors are independently normalized and are not comparable contribution magnitudes.",
+  "historical_h3_prediction_agreement": "6/6 selected validation examples",
+  "tensorflow": "2.21.0",
+  "keras": "3.13.2",
+  "limitations": "Illustrative, coarse localization only; not tumor segmentation, causal attribution, external validation, or clinical diagnosis.",
+  "public_sharing_note": "Check LC25000 image reuse rights before including samples in a public repository."
+}
