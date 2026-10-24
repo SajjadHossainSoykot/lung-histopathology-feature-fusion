@@ -1,0 +1,16 @@
+{
+  "state": "trained",
+  "started_utc": "2026-10-18T18:46:07.310421+00:00",
+  "configuration_fingerprint": "a6391b26fe761290fc7dafcf03f86e65b7f414fc5eb1123a2d0aa974c1c8aa94",
+  "epochs_completed": 5,
+  "held_out_test_evaluated": false,
+  "last_epoch_metrics": {
+    "accuracy": 0.9772945642471313,
+    "loss": 0.05996566265821457,
+    "val_accuracy": 0.9722833037376404,
+    "val_loss": 0.0808766558766365
+  },
+  "finished_utc": "2026-10-18T18:54:04.472759+00:00",
+  "elapsed_seconds": 477.15251184399995,
+  "best_checkpoint_sha256": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf"
+}

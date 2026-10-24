@@ -1,0 +1,93 @@
+{
+  "notebook": "02_Lung_MobileNetV2_Baseline.ipynb",
+  "notebook_revision": "2026-10-17-v1",
+  "run_name": "H1_MobileNetV2_frozen_seed42",
+  "experiment": "H1 frozen MobileNetV2 baseline",
+  "handoff_source": "PROJECT_HANDOFF_2026-10-17_UPDATED.md",
+  "dataset": "LC25000, lung classes only",
+  "class_to_id": {
+    "lung_aca": 0,
+    "lung_n": 1,
+    "lung_scc": 2
+  },
+  "class_names": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "source_files": {
+    "archive": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/archives/LC25000.zip",
+    "manifest": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/splits/manifest_candidate.csv",
+    "mapping": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/splits/class_mapping.json",
+    "groups": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/metadata/lc25000_image_groups.csv",
+    "audit": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/results/audit.json"
+  },
+  "source_sha256": {
+    "manifest": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+    "mapping": "4d14782118e3a438c13b209d7a594f2f9676d09cec25125b599d8c6d6c26a6a8",
+    "groups": "2ff9e992f759f265dfc9aa2363de0dfcc8e6559884d8bb02a4c925214fdf7e23",
+    "audit": "cd9aecfb8bfe64ca956b205e333ce9c9697dbfa88d4c46dc89c3ac088115fac0"
+  },
+  "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+  "resolved_manifest_columns": {
+    "path": "relative_path",
+    "split": "split",
+    "class_name": "class_name",
+    "class_id": "class_id",
+    "group": "group_id",
+    "sha256": "sha256"
+  },
+  "image_counts": {
+    "train": 10394,
+    "val": 2273,
+    "test": 2333
+  },
+  "source_group_counts": {
+    "train": 514,
+    "val": 113,
+    "test": 113
+  },
+  "grouping_unit": "reconstructed source-image group; NOT patient ID",
+  "input_size": [
+    224,
+    224
+  ],
+  "channels": 3,
+  "resize": "tf.image.resize_with_pad, bilinear, antialias=True",
+  "pipeline_pixel_range": [
+    0,
+    255
+  ],
+  "pipeline_dtype": "float32",
+  "scaling_inside_model": "x / 127.5 - 1.0",
+  "resize_inside_model": false,
+  "backbone": "MobileNetV2",
+  "alpha": 1.0,
+  "weights": "imagenet",
+  "backbone_trainable": false,
+  "backbone_call_training": false,
+  "head": "GlobalAveragePooling2D -> Dropout -> Dense(3, softmax)",
+  "dropout": 0.2,
+  "seed": 42,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "SparseCategoricalCrossentropy",
+  "class_weights": {
+    "0": 0.9973133755517175,
+    "1": 1.0048337200309359,
+    "2": 0.9978878648233487
+  },
+  "additional_training_augmentation": false,
+  "stain_normalization": false,
+  "feature_fusion": false,
+  "fine_tuning": false,
+  "grad_cam": false,
+  "max_epochs": 6,
+  "early_stopping_patience": 2,
+  "checkpoint_monitor": "val_loss",
+  "checkpoint_mode": "min",
+  "held_out_test_evaluated": false,
+  "trainable_parameters": 3843,
+  "total_parameters": 2261827
+}

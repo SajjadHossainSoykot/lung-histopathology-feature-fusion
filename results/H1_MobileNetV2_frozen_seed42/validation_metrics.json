@@ -1,0 +1,38 @@
+{
+  "run_name": "H1_MobileNetV2_frozen_seed42",
+  "evaluation_split": "validation",
+  "n_images": 2273,
+  "n_source_groups": 113,
+  "best_epoch_1_based": 3,
+  "epochs_completed": 5,
+  "validation_loss": 0.07815605401992798,
+  "accuracy": 0.9709634843818742,
+  "macro_f1": 0.9708255096233384,
+  "weighted_f1": 0.9709203799783506,
+  "class_names": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      716,
+      5,
+      37
+    ],
+    [
+      2,
+      762,
+      0
+    ],
+    [
+      22,
+      0,
+      729
+    ]
+  ],
+  "checkpoint_sha256": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+  "held_out_test_evaluated": false,
+  "softmax_scores_calibrated": false,
+  "grouping_unit": "reconstructed source-image group; NOT patient ID"
+}
