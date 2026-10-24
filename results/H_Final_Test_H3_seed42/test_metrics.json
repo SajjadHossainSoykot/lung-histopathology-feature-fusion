@@ -1,0 +1,16 @@
+{
+  "partition": "TEST",
+  "experiment": "H_Final_Test_H3_seed42",
+  "selected_model": "H3_MobileNetV2_EfficientNetB0_fusion_seed42",
+  "n_images": 2333,
+  "n_reconstructed_source_groups": 113,
+  "grouping_unit": "reconstructed source-image group; NOT patient ID",
+  "accuracy": 0.962280325760823,
+  "macro_precision": 0.9624123405983994,
+  "macro_recall": 0.9619915674603176,
+  "macro_f1": 0.9619609902960032,
+  "n_correct": 2245,
+  "n_errors": 88,
+  "source_predictions_sha256": "e23a916af52db9b5e53a172aac94efbe7b10578e110379421796a341e65b39d6",
+  "no_post_test_tuning": true
+}

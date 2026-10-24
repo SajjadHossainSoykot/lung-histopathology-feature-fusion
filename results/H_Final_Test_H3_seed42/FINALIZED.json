@@ -1,0 +1,6 @@
+{
+  "status": "TEST_REPORT_FINALIZED",
+  "created_utc": "2026-10-19T08:52:16.517201+00:00",
+  "test_images": 2333,
+  "test_predictions_sha256": "e23a916af52db9b5e53a172aac94efbe7b10578e110379421796a341e65b39d6"
+}

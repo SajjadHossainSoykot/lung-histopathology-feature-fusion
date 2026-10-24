@@ -1,0 +1,14 @@
+{
+  "status": "TEST_INFERENCE_STARTED",
+  "started_at_utc": "2026-10-19T08:50:10.133157+00:00",
+  "authorization_utc": "2026-10-19T08:49:04.815761+00:00",
+  "protocol_sha256": "ad29aba9a783002dd001ff24685ba93c004ecd73024f851009216de23a61b7aa",
+  "freeze_sha256": "7325e97d9aff55e6323dd6932d4456e95ec70632a12284a07aa0f7407c16cf9a",
+  "checkpoint_sha256": "9e1a5bbf49da7e88a529f5ac08303c65e138d7c9f818959aaddd46f609890c95",
+  "manifest_sha256": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+  "test_order_sha256": "210f47da525b7eda93ca9466e71c0ade94eedb02404b6a970141b3555cfb99b1",
+  "test_images_expected": 2333,
+  "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+  "training_performed": false,
+  "test_based_tuning_allowed": false
+}

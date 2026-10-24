@@ -1,0 +1,15 @@
+{
+  "FINALIZED.json": "ddb83d50cd8a82ca23fa7a83ce1ad72e79dec6f45f1d852dd369a02762dba4b5",
+  "RUN_SUMMARY.md": "29da88c1d77311e5296f7e5ce71b8ad1b98dfd5f4baf8a266ca1beff2f718f5f",
+  "test_classification_report.csv": "652a00227fa8bdaf0fa32b5160b8c51af8aa2d049a0d879f7af490bc4f71c111",
+  "test_classification_report.txt": "5ca8c3ea9a37de05722176911ac38426d754c4f60911ef3151dfb105debe5637",
+  "test_confusion_matrix.csv": "398b629f7088c4babdad4e681e37b52e6bc8401b0e3e8f6c97322dc7b738fe17",
+  "test_confusion_matrix.png": "0dcd9a68bc78af433458b887de9c2df27b7d57589f2cfc90bbfb936087a0edeb",
+  "test_environment.json": "d2cbf56afcee554e073f1ab164a8cea084033fdd65ac9d78bc366eb509c95bd3",
+  "test_evaluation_started.json": "840fd2b1f051a0d6f11501c4261c3b30d5a2df5067aa223b9b3e0dcc199f4afe",
+  "test_inference_completed.json": "90ac0d178011eab7b6a566f9c9195eaf82368676cf298d782e4bd4eeccca1639",
+  "test_metrics.json": "a5e1126856dd854eb60b74e17553364914793ae9430eb895895919d25719a947",
+  "test_per_class_metrics.csv": "60006ba1092d1244395a5475a45989773a72e3ec662d663f11941c9512c64d20",
+  "test_predictions.csv": "e23a916af52db9b5e53a172aac94efbe7b10578e110379421796a341e65b39d6",
+  "test_run_provenance.json": "1b5a7753ef37b6d3e2bdfca26e665ba1228b5ee1b9177d04d2cab2355e17b950"
+}

@@ -1,0 +1,9 @@
+              precision    recall  f1-score   support
+
+    lung_aca     0.9509    0.9336    0.9422       768
+      lung_n     0.9575    1.0000    0.9783       788
+    lung_scc     0.9788    0.9524    0.9654       777
+
+    accuracy                         0.9623      2333
+   macro avg     0.9624    0.9620    0.9620      2333
+weighted avg     0.9624    0.9623    0.9621      2333

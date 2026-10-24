@@ -1,0 +1,14 @@
+{
+  "python": "3.13.15",
+  "tensorflow": "2.21.0",
+  "visible_gpus": [
+    "PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')"
+  ],
+  "packages": {
+    "keras": "3.13.2",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.10.0"
+  }
+}
