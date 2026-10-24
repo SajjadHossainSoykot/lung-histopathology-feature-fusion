@@ -1,0 +1,25 @@
+{
+  "derivation": "pooled masked LAB moments over deterministic training-only RGB images",
+  "train_reference_images_per_class": 32,
+  "train_reference_one_image_per_source_group": true,
+  "n_training_reference_images": 96,
+  "n_masked_tissue_pixels": 4816789,
+  "target_lab_mean": [
+    63.149070739746094,
+    29.662397384643555,
+    -35.614864349365234
+  ],
+  "target_lab_std": [
+    15.389975547790527,
+    16.725372314453125,
+    22.370756149291992
+  ],
+  "tissue_min_mean": 25.0,
+  "tissue_max_channel": 235.0,
+  "minimum_tissue_pixels": 256,
+  "std_scale_bounds": [
+    0.6,
+    1.8
+  ],
+  "train_reference_index_sha256": "852f11100536651b68ef34ddae8adab652ef22b84e3d3dcb5c7867bd2df28be0"
+}

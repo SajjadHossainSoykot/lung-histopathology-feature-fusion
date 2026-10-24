@@ -1,0 +1,157 @@
+{
+  "notebook": "H4_Lung_Stain_Normalization_Augmentation_Robustness.ipynb",
+  "notebook_revision": "2026-10-19-h4-v1",
+  "run_name": "H4_Reinhard_HE_Aug_Robustness_seed42",
+  "experiment": "Fixed-reference Reinhard plus offline H&E-inspired train-only augmentation",
+  "comparison_conditions": [
+    "H3_original",
+    "H4_N_reinhard",
+    "H4_NA_reinhard_he_aug"
+  ],
+  "class_to_id": {
+    "lung_aca": 0,
+    "lung_n": 1,
+    "lung_scc": 2
+  },
+  "class_names": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "source_sha256": {
+    "manifest": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+    "mapping": "4d14782118e3a438c13b209d7a594f2f9676d09cec25125b599d8c6d6c26a6a8",
+    "groups": "2ff9e992f759f265dfc9aa2363de0dfcc8e6559884d8bb02a4c925214fdf7e23",
+    "audit": "cd9aecfb8bfe64ca956b205e333ce9c9697dbfa88d4c46dc89c3ac088115fac0"
+  },
+  "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+  "source_group_counts": {
+    "train": 514,
+    "val": 113,
+    "test": 113
+  },
+  "image_counts": {
+    "train": 10394,
+    "val": 2273,
+    "test": 2333
+  },
+  "grouping_unit": "reconstructed source-image group, NOT patient ID",
+  "H1_H2_checkpoint_sha256": {
+    "H1": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+    "H2": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6"
+  },
+  "H3_head_sha256": "77deea98faef81db0fd8e6574598f677a18f9368fde3edccc67c3549b5098b75",
+  "H3_image_model_sha256": "9e1a5bbf49da7e88a529f5ac08303c65e138d7c9f818959aaddd46f609890c95",
+  "H3_validation_metrics_sha256": "fac7f87a1936f742ba48595d0a073ea8ba801747e3471e66ce7cc4099a9935c7",
+  "frozen_feature_vector": "1280 MobileNetV2 GAP + 1280 EfficientNetB0 GAP",
+  "train_index_sha256": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+  "val_index_sha256": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7",
+  "protocol": {
+    "transform_version": "h4_reinhard_residual_he_v1",
+    "input_shape": [
+      224,
+      224,
+      3
+    ],
+    "resize": "tf.image.resize_with_pad, bilinear, antialias=True",
+    "input_range": [
+      0,
+      255
+    ],
+    "output_range": [
+      0,
+      255
+    ],
+    "reinhard": {
+      "derivation": "pooled masked LAB moments over deterministic training-only RGB images",
+      "train_reference_images_per_class": 32,
+      "train_reference_one_image_per_source_group": true,
+      "n_training_reference_images": 96,
+      "n_masked_tissue_pixels": 4816789,
+      "target_lab_mean": [
+        63.149070739746094,
+        29.662397384643555,
+        -35.614864349365234
+      ],
+      "target_lab_std": [
+        15.389975547790527,
+        16.725372314453125,
+        22.370756149291992
+      ],
+      "tissue_min_mean": 25.0,
+      "tissue_max_channel": 235.0,
+      "minimum_tissue_pixels": 256,
+      "std_scale_bounds": [
+        0.6,
+        1.8
+      ],
+      "train_reference_index_sha256": "852f11100536651b68ef34ddae8adab652ef22b84e3d3dcb5c7867bd2df28be0"
+    },
+    "he_basis_rows": [
+      [
+        0.6500285863876343,
+        0.7040309906005859,
+        0.2860126197338104
+      ],
+      [
+        0.07213324308395386,
+        0.9918321371078491,
+        0.10519431531429291
+      ]
+    ],
+    "he_shift_math": "OD_new = OD_old + max(OD_old @ pinv(HE_basis),0) * (factors-1) @ HE_basis",
+    "train_aug_probability": 0.8,
+    "train_aug_h_range": [
+      0.8,
+      1.2
+    ],
+    "train_aug_e_range": [
+      0.8,
+      1.2
+    ],
+    "train_aug_order": "Reinhard normalization THEN H&E-inspired perturbation",
+    "train_aug_views_per_image": 1,
+    "val_stress_order": "synthetic H&E shift THEN Reinhard normalization (H4 only)",
+    "validation_stress_shifts": {
+      "clean": [
+        1.0,
+        1.0
+      ],
+      "h_up_e_down": [
+        1.25,
+        0.75
+      ],
+      "h_down_e_up": [
+        0.75,
+        1.25
+      ]
+    },
+    "opencv_version": "4.14.0"
+  },
+  "feature_cache_key": "a28fa20606419f6c2bc0c6cc63b6fa72d72cc278131ec7c12a99c47a85f2c3a4",
+  "feature_cache_dir": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/feature_cache/H4_stain_a28fa20606419f6c",
+  "feature_cache_metadata_sha256": "211b90abb631843f786d892cd5f771c31d9b19eb33e12b3472e58f2e8f1785ed",
+  "augmentation_factors_sha256": "355a01ce82591a0e93c7ef936edab85e956ee57907c83a01a842b352ff0b6b4f",
+  "same_train_rows_per_condition": 10394,
+  "training_seed": 42,
+  "head_trainable_parameters": 7683,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "dropout": 0.2,
+  "batch_size": 16,
+  "loss": "SparseCategoricalCrossentropy",
+  "class_weights": {
+    "0": 0.9973133755517175,
+    "1": 1.0048337200309359,
+    "2": 0.9978878648233487
+  },
+  "max_epochs": 6,
+  "patience": 2,
+  "checkpoint_monitor": "val_loss",
+  "checkpoint_mode": "min",
+  "validation_only": true,
+  "held_out_test_evaluated": false,
+  "features_precomputed_offline": true,
+  "backbones_frozen": true,
+  "train_aug_single_fixed_view_not_epochwise": true
+}

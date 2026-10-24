@@ -1,0 +1,23 @@
+{
+  "image_counts": {
+    "train": 10394,
+    "test": 2333,
+    "val": 2273
+  },
+  "source_group_counts": {
+    "test": 113,
+    "train": 514,
+    "val": 113
+  },
+  "total_reconstructed_source_groups": 740,
+  "groups_spanning_splits": 0,
+  "saved_all_split_sha256_checked": true,
+  "grouping_unit": "reconstructed source-image group; NOT patient ID",
+  "test_image_pixels_read": false,
+  "independent_reconstruction_of_source_groups_performed": false,
+  "working_images_fully_decoded": 12667,
+  "working_unreadable_images": 0,
+  "train_val_cross_split_byte_identical_hashes": 0,
+  "working_hashes_matched_recorded_sha256": true,
+  "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728"
+}

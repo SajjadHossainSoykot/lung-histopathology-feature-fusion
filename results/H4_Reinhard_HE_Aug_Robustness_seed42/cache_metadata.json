@@ -1,0 +1,123 @@
+{
+  "cache_key": "a28fa20606419f6c2bc0c6cc63b6fa72d72cc278131ec7c12a99c47a85f2c3a4",
+  "inputs": {
+    "manifest_sha256": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+    "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+    "H1_checkpoint_sha256": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+    "H2_checkpoint_sha256": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6",
+    "H3_head_sha256": "77deea98faef81db0fd8e6574598f677a18f9368fde3edccc67c3549b5098b75",
+    "train_index_sha256": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+    "val_index_sha256": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7",
+    "aug_draws_sha256": "355a01ce82591a0e93c7ef936edab85e956ee57907c83a01a842b352ff0b6b4f",
+    "protocol": {
+      "transform_version": "h4_reinhard_residual_he_v1",
+      "input_shape": [
+        224,
+        224,
+        3
+      ],
+      "resize": "tf.image.resize_with_pad, bilinear, antialias=True",
+      "input_range": [
+        0,
+        255
+      ],
+      "output_range": [
+        0,
+        255
+      ],
+      "reinhard": {
+        "derivation": "pooled masked LAB moments over deterministic training-only RGB images",
+        "train_reference_images_per_class": 32,
+        "train_reference_one_image_per_source_group": true,
+        "n_training_reference_images": 96,
+        "n_masked_tissue_pixels": 4816789,
+        "target_lab_mean": [
+          63.149070739746094,
+          29.662397384643555,
+          -35.614864349365234
+        ],
+        "target_lab_std": [
+          15.389975547790527,
+          16.725372314453125,
+          22.370756149291992
+        ],
+        "tissue_min_mean": 25.0,
+        "tissue_max_channel": 235.0,
+        "minimum_tissue_pixels": 256,
+        "std_scale_bounds": [
+          0.6,
+          1.8
+        ],
+        "train_reference_index_sha256": "852f11100536651b68ef34ddae8adab652ef22b84e3d3dcb5c7867bd2df28be0"
+      },
+      "he_basis_rows": [
+        [
+          0.6500285863876343,
+          0.7040309906005859,
+          0.2860126197338104
+        ],
+        [
+          0.07213324308395386,
+          0.9918321371078491,
+          0.10519431531429291
+        ]
+      ],
+      "he_shift_math": "OD_new = OD_old + max(OD_old @ pinv(HE_basis),0) * (factors-1) @ HE_basis",
+      "train_aug_probability": 0.8,
+      "train_aug_h_range": [
+        0.8,
+        1.2
+      ],
+      "train_aug_e_range": [
+        0.8,
+        1.2
+      ],
+      "train_aug_order": "Reinhard normalization THEN H&E-inspired perturbation",
+      "train_aug_views_per_image": 1,
+      "val_stress_order": "synthetic H&E shift THEN Reinhard normalization (H4 only)",
+      "validation_stress_shifts": {
+        "clean": [
+          1.0,
+          1.0
+        ],
+        "h_up_e_down": [
+          1.25,
+          0.75
+        ],
+        "h_down_e_up": [
+          0.75,
+          1.25
+        ]
+      },
+      "opencv_version": "4.14.0"
+    },
+    "tensorflow_version": "2.21.0",
+    "keras_version": "3.13.2"
+  },
+  "features_cached": [
+    "train_norm",
+    "train_norm_aug",
+    "val_norm_clean",
+    "val_raw_h_up_e_down",
+    "val_norm_h_up_e_down",
+    "val_raw_h_down_e_up",
+    "val_norm_h_down_e_up"
+  ],
+  "train_rows_per_new_condition": 10394,
+  "validation_rows_per_condition_and_shift": 2273,
+  "test_pixels_read": false,
+  "elapsed_seconds": 990.44,
+  "files_sha256": {
+    "train_norm.npy": "2cf0e483cbd85747ef435c7b0cff0998ad160aaa4d8726210c95d86083a8ea32",
+    "train_norm_aug.npy": "7504eac2af864c7e98d7fb1dd39ef6ad381dc95e5da597babae493e811ce6ebd",
+    "val_norm_clean.npy": "5291f1902143827e591c3b0ab9e9de30c985dce5408a9c36cf5c5d9dd8a69fc4",
+    "val_raw_h_up_e_down.npy": "ed7c561cf899b101bcc67e032b41a4779f43c307f49834c30000780e70f64425",
+    "val_norm_h_up_e_down.npy": "4f965187b72019ff98a0fbe0418651eae5139d6630bce2e6f133e8c899367ba6",
+    "val_raw_h_down_e_up.npy": "0c257b6220f48cd8685440219b2e94abc616044bb60554741170e362fdf0d02f",
+    "val_norm_h_down_e_up.npy": "33648e43b9ed88687865a7d492f1aab06f36825ab84ace6ccfb5de3ad735f6ca",
+    "train_index.csv": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+    "val_index.csv": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7",
+    "reference_stats.json": "4c37567acfc2c2189a47fb0d67fb33d3e96d17011e2bb3fbe02974921ed60c76",
+    "augmentation_factors.csv": "355a01ce82591a0e93c7ef936edab85e956ee57907c83a01a842b352ff0b6b4f"
+  }
+}

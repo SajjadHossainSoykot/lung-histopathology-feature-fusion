@@ -1,0 +1,44 @@
+{
+  "state": "exported_validation_only",
+  "configuration_sha256": "e7ef410aefa49bf05e3d858c5f9a4102eecb0fdda031d8df40b12bcec48fbfed",
+  "conditions": {
+    "H4_N_reinhard": {
+      "state": "trained",
+      "started_utc": "2026-10-18T22:47:02.618624+00:00",
+      "epochs_completed": 6,
+      "last_epoch_metrics": {
+        "accuracy": 0.9915335774421692,
+        "loss": 0.02614627406001091,
+        "val_accuracy": 0.9727232456207275,
+        "val_loss": 0.07510895282030106
+      },
+      "best_epoch": 6,
+      "best_val_loss": 0.075108952820301,
+      "best_checkpoint_sha256": "f70fca6c0ecd9c88a597cbcaa4879f3291bfff88a231e3a163dd93076822226c",
+      "elapsed_seconds": 22.67,
+      "finished_utc": "2026-10-18T22:47:25.301836+00:00",
+      "held_out_test_evaluated": false
+    },
+    "H4_NA_reinhard_he_aug": {
+      "state": "trained",
+      "started_utc": "2026-10-18T22:49:04.659218+00:00",
+      "epochs_completed": 6,
+      "last_epoch_metrics": {
+        "accuracy": 0.9902828335762024,
+        "loss": 0.027170278131961823,
+        "val_accuracy": 0.9714034199714661,
+        "val_loss": 0.0721028596162796
+      },
+      "best_epoch": 6,
+      "best_val_loss": 0.0721028596162796,
+      "best_checkpoint_sha256": "c1eb086c27e746a364494acb893c6a28c65e878da6d0b37f2fc1c7d6ffee0694",
+      "elapsed_seconds": 20.98,
+      "finished_utc": "2026-10-18T22:49:25.662441+00:00",
+      "held_out_test_evaluated": false
+    }
+  },
+  "held_out_test_evaluated": false,
+  "started_utc": "2026-10-18T22:47:02.604768+00:00",
+  "validation_conditions_completed": 9,
+  "completed_utc": "2026-10-18T22:52:19.878146+00:00"
+}
