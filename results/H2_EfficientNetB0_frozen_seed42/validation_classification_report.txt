@@ -1,0 +1,11 @@
+VALIDATION ONLY - not a held-out test result
+
+              precision    recall  f1-score   support
+
+    lung_aca     0.9728    0.9433    0.9578       758
+      lung_n     0.9961    0.9974    0.9967       764
+    lung_scc     0.9483    0.9760    0.9619       751
+
+    accuracy                         0.9723      2273
+   macro avg     0.9724    0.9722    0.9722      2273
+weighted avg     0.9725    0.9723    0.9723      2273

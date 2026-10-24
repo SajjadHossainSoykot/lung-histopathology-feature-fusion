@@ -1,0 +1,38 @@
+{
+  "run_name": "H2_EfficientNetB0_frozen_seed42",
+  "evaluation_split": "validation",
+  "n_images": 2273,
+  "n_source_groups": 113,
+  "best_epoch_1_based": 6,
+  "epochs_completed": 6,
+  "validation_loss": 0.07029128819704056,
+  "accuracy": 0.9722833260008799,
+  "macro_f1": 0.9721584090263145,
+  "weighted_f1": 0.9722547319217825,
+  "class_names": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      715,
+      3,
+      40
+    ],
+    [
+      2,
+      762,
+      0
+    ],
+    [
+      18,
+      0,
+      733
+    ]
+  ],
+  "checkpoint_sha256": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6",
+  "held_out_test_evaluated": false,
+  "softmax_scores_calibrated": false,
+  "grouping_unit": "reconstructed source-image group; NOT patient ID"
+}
