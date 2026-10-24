@@ -1,0 +1,108 @@
+{
+  "notebook": "H3_Lung_Deep_Feature_Fusion.ipynb",
+  "notebook_revision": "2026-10-19-h3-v1",
+  "run_name": "H3_MobileNetV2_EfficientNetB0_fusion_seed42",
+  "experiment": "H3 frozen pooled-feature concatenation",
+  "reference_experiments": [
+    "H1_MobileNetV2_frozen_seed42",
+    "H2_EfficientNetB0_frozen_seed42"
+  ],
+  "dataset": "LC25000, lung-only classes",
+  "class_to_id": {
+    "lung_aca": 0,
+    "lung_n": 1,
+    "lung_scc": 2
+  },
+  "class_names": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "source_sha256": {
+    "manifest": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+    "mapping": "4d14782118e3a438c13b209d7a594f2f9676d09cec25125b599d8c6d6c26a6a8",
+    "groups": "2ff9e992f759f265dfc9aa2363de0dfcc8e6559884d8bb02a4c925214fdf7e23",
+    "audit": "cd9aecfb8bfe64ca956b205e333ce9c9697dbfa88d4c46dc89c3ac088115fac0"
+  },
+  "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+  "source_files": {
+    "archive": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/archives/LC25000.zip",
+    "manifest": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/splits/manifest_candidate.csv",
+    "mapping": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/splits/class_mapping.json",
+    "groups": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/metadata/lc25000_image_groups.csv",
+    "audit": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/results/audit.json"
+  },
+  "reference_checkpoint_sha256": {
+    "H1": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+    "H2": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6"
+  },
+  "reference_run_directories": {
+    "H1": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/results/H1_MobileNetV2_frozen_seed42",
+    "H2": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/results/H2_EfficientNetB0_frozen_seed42"
+  },
+  "image_counts": {
+    "train": 10394,
+    "val": 2273,
+    "test": 2333
+  },
+  "source_group_counts": {
+    "train": 514,
+    "val": 113,
+    "test": 113
+  },
+  "grouping_unit": "reconstructed source-image group; NOT patient ID",
+  "input_size": [
+    224,
+    224
+  ],
+  "channels": 3,
+  "resize": "tf.image.resize_with_pad, bilinear, antialias=True",
+  "pipeline_pixel_range": [
+    0,
+    255
+  ],
+  "pipeline_dtype": "float32",
+  "mobilenetv2_preprocessing": "H1 model built-in Rescaling(1/127.5, offset=-1)",
+  "efficientnetb0_preprocessing": "H2 model native EfficientNetB0 Rescaling",
+  "feature_extraction": "global_average_pooling before dropout; cached separately by source model",
+  "feature_order": [
+    "H1_MobileNetV2_GAP_1280",
+    "H2_EfficientNetB0_GAP_1280"
+  ],
+  "feature_dimensions": [
+    1280,
+    1280
+  ],
+  "fused_dimensions": 2560,
+  "feature_cache_dir": "/content/drive/MyDrive/ICTIU_Final_Projects/lung/feature_cache/H3_fusion_d87930d4f5c72dcf",
+  "feature_cache_key": "d87930d4f5c72dcffa8d2c65b333413707812fc3b59f79bdcdff5eae9496dcf6",
+  "feature_cache_metadata_sha256": "0b7b49bee20a2e3d1cc9fc1ca0116ca9267eafa9d95d7cefe6d718ed47ab263f",
+  "train_index_sha256": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+  "val_index_sha256": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7",
+  "backbones_frozen": true,
+  "reference_head_probabilities_fused": false,
+  "head": "Dropout(0.2) -> Dense(3,softmax)",
+  "trainable_parameters": 7683,
+  "dropout": 0.2,
+  "seed": 42,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "SparseCategoricalCrossentropy",
+  "class_weights": {
+    "0": 0.9973133755517175,
+    "1": 1.0048337200309359,
+    "2": 0.9978878648233487
+  },
+  "max_epochs": 6,
+  "early_stopping_patience": 2,
+  "checkpoint_monitor": "val_loss",
+  "checkpoint_mode": "min",
+  "additional_training_augmentation": false,
+  "stain_normalization": false,
+  "stain_aware_augmentation": false,
+  "feature_fusion": true,
+  "fine_tuning": false,
+  "grad_cam": false,
+  "held_out_test_evaluated": false
+}

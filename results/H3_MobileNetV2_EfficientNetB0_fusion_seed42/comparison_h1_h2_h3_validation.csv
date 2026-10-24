@@ -1,0 +1,4 @@
+experiment,backbones,evaluation_split,n_images,accuracy,macro_f1,source
+H1_MobileNetV2_frozen_seed42,MobileNetV2,validation,2273,0.9709634843818742,0.9708255096233384,H1 saved validation_metrics.json
+H2_EfficientNetB0_frozen_seed42,EfficientNetB0,validation,2273,0.9722833260008799,0.9721584090263145,H2 saved validation_metrics.json
+H3_MobileNetV2_EfficientNetB0_fusion_seed42,MobileNetV2 + EfficientNetB0 (pooled-feature concatenation),validation,2273,0.9802023757149142,0.9801385203475981,H3 saved best-head validation

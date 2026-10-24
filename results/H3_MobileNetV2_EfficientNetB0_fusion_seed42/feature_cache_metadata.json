@@ -1,0 +1,47 @@
+{
+  "cache_key": "d87930d4f5c72dcffa8d2c65b333413707812fc3b59f79bdcdff5eae9496dcf6",
+  "inputs": {
+    "manifest_sha256": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+    "archive_sha256": "382c98315435cbbf559be5da94cc0b62f696434e30e15feefebe9c892de01728",
+    "h1_checkpoint_sha256": "503559b9333124d8be0b665a9fd9538220a750db2274ca55a9e61dff503dd6bf",
+    "h2_checkpoint_sha256": "fcd95f3198c1a63641462b3a72e6b21cf501a4ad0928186bd91c2362c53fa5f6",
+    "train_index_sha256": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+    "val_index_sha256": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7",
+    "image_size": [
+      224,
+      224
+    ],
+    "resize": "tf.image.resize_with_pad(bilinear,antialias=True)",
+    "preprocessing": "saved H1 internal MobileNet scaling; saved H2 native EfficientNet scaling",
+    "extraction": "global_average_pooling before dropout, 1280 + 1280",
+    "tensorflow_version": "2.21.0",
+    "keras_version": "3.13.2",
+    "float_policy": "float32"
+  },
+  "train_shape": [
+    10394,
+    2560
+  ],
+  "val_shape": [
+    2273,
+    2560
+  ],
+  "feature_order": [
+    "H1_MobileNetV2_GAP_1280",
+    "H2_EfficientNetB0_GAP_1280"
+  ],
+  "splits_cached": [
+    "train",
+    "val"
+  ],
+  "held_out_test_features_extracted": false,
+  "elapsed_seconds": 203.82,
+  "file_sha256": {
+    "train_features.npy": "c397f365cdea74dd8faa1d8b4ec939ff680018b7d5d5bff7888b8f6720ab23e3",
+    "val_features.npy": "3bb286247af372fa43c787a69cf60ca536a815622f70576af524b3ba42156e57",
+    "train_labels.npy": "1654f786cff27d847ea1d25d8e258fea5f1e1bd044850477cd67a40915fb61f1",
+    "val_labels.npy": "890daba2758340fa2938d52c8e709546c8284778018a7b4a62e81dd7254ac97f",
+    "train_index.csv": "9807b9d866ce0002bec2fdf47ba9eba7987e975348165178f79c53ba49ba7ed8",
+    "val_index.csv": "f30b7697ca5e48d3ff263efbccbd7ed938533db57d0fcbada94ed78ef4269fd7"
+  }
+}

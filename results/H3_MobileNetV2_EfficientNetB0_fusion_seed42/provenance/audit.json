@@ -1,0 +1,29 @@
+{
+  "project": "lung",
+  "status": "PASS_candidate_split_checks",
+  "images": 15000,
+  "classes": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "unique_groups": 740,
+  "groups_per_split": {
+    "test": 113,
+    "train": 514,
+    "validation": 113
+  },
+  "images_per_split": {
+    "train": 10394,
+    "test": 2333,
+    "validation": 2273
+  },
+  "group_overlap": 0,
+  "unreadable_images": 0,
+  "cross_split_exact_duplicate_hashes": 0,
+  "split_seed": 42,
+  "manifest_sha256": "d931c9b11d03716c3c426f251bc75eaa2051002acca99d3ba66d59d964285dea",
+  "source_note": "LC25000 lung images; LC25000-clean reconstructed source groups; annotation SHA256=2ff9e992f759f265dfc9aa2363de0dfcc8e6559884d8bb02a4c925214fdf7e23",
+  "limitation": "Checks do not prove all biological dependencies were recovered. No model has been trained.",
+  "recorded_utc": "2026-10-16T14:36:36.005529+00:00"
+}

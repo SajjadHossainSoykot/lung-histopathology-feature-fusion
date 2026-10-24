@@ -1,0 +1,15 @@
+{
+  "run_name": "H3_MobileNetV2_EfficientNetB0_fusion_seed42",
+  "evaluation_split": "validation",
+  "n_images": 2273,
+  "accuracy": 0.9802023757149142,
+  "macro_f1": 0.9801385203475981,
+  "weighted_f1": 0.9801924208525898,
+  "validation_loss": 0.04874304309487343,
+  "correct_predictions": 2228,
+  "incorrect_predictions": 45,
+  "best_epoch": 5,
+  "checkpoint_sha256": "77deea98faef81db0fd8e6574598f677a18f9368fde3edccc67c3549b5098b75",
+  "feature_cache_key": "d87930d4f5c72dcffa8d2c65b333413707812fc3b59f79bdcdff5eae9496dcf6",
+  "held_out_test_evaluated": false
+}
